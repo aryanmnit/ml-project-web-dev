@@ -1,0 +1,252 @@
+/* Updated styles for professional and attractive design */
+body {
+    background-color: rgba(188, 244, 244, 0.976);
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#Hlogo, #Qlogo {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    height: 70px;
+    width: 70px;
+}
+
+#header {
+    display: inline-block;
+    font-size: 25px;
+    position: relative;
+    left: 20px;
+    top: 0px;
+}
+
+#intro {
+    font-size: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    padding: 80px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#intro_heading {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 80px;
+}
+
+.button1 {
+    background-color: rgba(236, 16, 16, 0.69);
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: bisque;
+    border-radius: 10px;
+    margin: 1%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button1:hover {
+    background-color: rgba(200, 10, 10, 0.85);
+    transform: translateY(-3px);
+}
+
+#process {
+    text-align: center;
+    position: relative;
+    margin-top: 250px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+#step1, #step2, #step3 {
+    font-weight: bold;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#step1 { position: relative; right: 400px; }
+#step2 { position: relative; }
+#step3 { position: relative; left: 400px; }
+
+#step1text, #step2text, #step3text { font-size: 20px; }
+#step1text { position: relative; bottom: 0.8cm; right: 480px; }
+#step2text { display: inline-block; position: relative; bottom: 3cm; }
+#step3text { position: relative; left: 13cm; bottom: 5.3cm; }
+
+#quiz_div {
+    margin-bottom: 5cm;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.q {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    left: 10cm;
+    top: 2cm;
+}
+
+input[type="radio"] { display: none; }
+
+label {
+    display: block;
+    width: fit-content;
+    text-align: center;
+    border: 3px solid brown;
+    cursor: pointer;
+    position: relative;
+    left: 11.3cm;
+    top: 1.8cm;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 1, 0, 0.803);
+    border-radius: 10px;
+    margin: 1%;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label:hover {
+    transform: scale(1.03);
+    background-color: rgba(255, 235, 205, 0.5);
+}
+
+input[type="radio"]:checked + label {
+    background-color: #a83232;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(168, 50, 50, 0.6);
+}
+
+.sd { padding: 10px 228px; }
+.d  { padding: 10px 268px; }
+.n  { padding: 10px 272px; }
+.a  { padding: 10px 280px; }
+.sa { padding: 10px 242px; }
+
+#quiz_submit {
+    display: block;
+    position: relative;
+    left: 17cm;
+    bottom: 1cm;
+    margin-top: 5cm;
+    margin-bottom: 7cm;
+    background-color: rgba(236, 16, 16, 0.69);
+    padding: 15px 15px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: bisque;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#quiz_submit:hover {
+    background-color: rgba(200, 10, 10, 0.8);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+#Final_result {
+    text-align: center;
+    margin-top: 1cm;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.p_type {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.p_image {
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #header {
+        font-size: 20px;
+    }
+
+    #Hlogo, #Qlogo {
+        height: 50px;
+        width: 50px;
+        left: 10px;
+        top: 10px;
+    }
+
+    #intro_heading {
+        font-size: 40px !important;
+    }
+
+    .button1 {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #quiz_div, #Final_result {
+        width: 95% !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
+    }
+
+    .q {
+        font-size: 18px !important;
+        left: 0 !important;
+        top: 0 !important;
+        text-align: left !important;
+        margin-bottom: 10px !important;
+    }
+
+    label {
+        font-size: 16px !important;
+        padding: 10px !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin: 10px auto !important;
+    }
+
+    #quiz_submit {
+        left: 0 !important;
+        font-size: 16px !important;
+        padding: 12px 24px !important;
+        margin: 20px auto !important;
+        display: block !important;
+    }
+
+    .p_type {
+        font-size: 20px !important;
+    }
+
+    .p_image {
+        max-width: 90% !important;
+    }
+}
