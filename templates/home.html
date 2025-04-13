@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalityTest</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css')}}">
+</head>
+<body>
+    <!-- <h1 id="header">Persaonality Insights</h1> -->
+     <header>
+        <img src="{{ url_for('static', filename='logo.png')}}" alt="Logo" id="Hlogo">
+        <h1 id="header">Personality Insights</h1>
+     </header>
+    
+    <div id="intro">
+        <h1 id="intro_heading">What's your True Personality?</h1>
+        <p>Discover the depths of your character with our insightful test </p>
+        <button class="button1" onclick="location.href='/quiz'">Join Us Now</button>        
+        <!-- <button class="button1">Request Demo</button> -->
+    </div>
+    <div id="process">
+        <h1>How It Works</h1>
+        <p id="step1">Step 1</p>
+        <p id="step2">Step 2</p>
+        <p id="step3">Step 3</p>
+        <p id="step1text">Take the test that best <br>describes your feelings and preferances</p>
+        <p id="step2text">Answer each question as honestly <br>as possible to get the most accurate result</p>
+        <p id="step3text">Receive your results <br>and gain insights into your personality traits</p>
+    </div>
+</body>
+</html>

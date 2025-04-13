@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css')}}">
+</head>
+<body>
+    <header>
+        <img src="{{url_for('static', filename='logo.png')}}" alt="Logo" id="Hlogo">
+        <h1 id="header">Personality Insights</h1>
+    </header>
+    <div id="Final_result">
+        {% if result == "Thinker" %}
+            <h1 class="p_type">Thinker: The Philosopher</h1>
+            <p class="p_type">The Thinker personality type is analytical, logical, and deeply curious, <br>always seeking to understand complex systems and concepts. They excel at problem-solving, <br>enjoy intellectual challenges, and prefer objective reasoning over emotional decision-making.</p>
+            <img src="{{url_for('static', filename='thinker.png')}}" alt="thinker" class="p_image">
+        {% elif result == "Introvert" %}
+            <h1 class="p_type">Introvert: The Researcher</h1>
+            <p class="p_type">The Introvert personality type is reflective, thoughtful, <br>and energized by solitude, preferring deep conversations over small talk.They excel in independent work,<br>focusing on creativity, analysis, or problem-solving in quiet environments.</p>
+            <img src="{{url_for('static', filename='introvert.png')}}" alt="introvert" class="p_image">
+        {% elif result == "Extrovert" %}
+            <h1 class="p_type">Extrovert: The Entrepreneur</h1>
+            <p class="p_type">The Extrovert personality type is outgoing, energetic, and thrives <br>in social settings, gaining energy from interactions with others. They excel in dynamic <br>environments, enjoy teamwork, and are often expressive, enthusiastic, and confident communicators.</p>
+            <img src="{{url_for('static', filename='extrovert.png')}}" alt="extrovert" class="p_image">
+        {% elif result == "Sensitive" %}
+            <h1 class="p_type">Sensitive: The Artist</h1>
+            <p class="p_type">The Sensitive personality type is deeply empathetic, intuitive, and emotionally aware, often attuned <br> to the feelings of others and their surroundings. They are compassionate, creative, <br>and introspective, thriving in environments that allow them to express emotions and help others.</p>
+            <img src="{{url_for('static', filename='sensitive.png')}}" alt="sensitive" class="p_image">
+        {% elif result == "Planner" %}
+            <h1 class="p_type">Planner: The Architect</h1>
+            <p class="p_type">The Planner personality type is highly organized, detail-oriented, and thrives <br>on structure, strategy, and long-term vision. They excel at setting goals, <br>managing resources efficiently, and ensuring smooth execution of tasks.</p>
+            <img src="{{url_for('static', filename='planner.png')}}" alt="planner" class="p_image">
+        {% else %}
+            <h1 class="p_type">Explorer: The Archaeologist</h1>
+            <p class="p_type">The Explorer personality type is adventurous, curious, and thrives <br>on new experiences, constantly seeking to discover the unknown. They are independent, <br>open-minded, and fearless in facing challenges, whether in travel, innovation, or problem-solving.</p>
+            <img src="{{url_for('static', filename='explorer.png')}}" alt="explorer" class="p_image">
+        {% endif %}
+    </div>
+</body>
+</html>

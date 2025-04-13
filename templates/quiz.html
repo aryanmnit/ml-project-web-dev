@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='quiz.css')}}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="Qlogo">
+    <h1 id="header">Personality Insights</h1>
+     </header>
+    <div id="quiz_div">
+        <form action='/predict' method="POST">
+            <p class="q">1. I feel energized after socializing with a group of people:</p>
+            <input type="radio" name="q1csv" id="q1sd" value="1">
+            <label for="q1sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q1csv" id="q1d" value="2">
+            <label for="q1d" class="d">Disagree</label>
+            <input type="radio" name="q1csv" id="q1n" value="3">
+            <label for="q1n" class="n">Neutral</label>
+            <input type="radio" name="q1csv" id="q1a" value="4">
+            <label for="q1a" class="a">Agree</label>
+            <input type="radio" name="q1csv" id="q1sa" value="5">
+            <label for="q1sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">2. I prefer spending time alone rather than in large groups:</p>
+            <input type="radio" name="q2csv" id="q2sd" value="1">
+            <label for="q2sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q2csv" id="q2d" value="2">
+            <label for="q2d" class="d">Disagree</label>
+            <input type="radio" name="q2csv" id="q2n" value="3">
+            <label for="q2n" class="n">Neutral</label>
+            <input type="radio" name="q2csv" id="q2a" value="4">
+            <label for="q2a" class="a">Agree</label>
+            <input type="radio" name="q2csv" id="q2sa" value="5">
+            <label for="q2sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">3. I often initiate conversations with new people:</p>
+            <input type="radio" name="q3csv" id="q3sd" value="1">
+            <label for="q3sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q3csv" id="q3d" value="2">
+            <label for="q3d" class="d">Disagree</label>
+            <input type="radio" name="q3csv" id="q3n" value="3">
+            <label for="q3n" class="n">Neutral</label>
+            <input type="radio" name="q3csv" id="q3a" value="4">
+            <label for="q3a" class="a">Agree</label>
+            <input type="radio" name="q3csv" id="q3sa" value="5">
+            <label for="q3sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">4. I feel drained after long periods of social interaction:</p>
+            <input type="radio" name="q4csv" id="q4sd" value="1">
+            <label for="q4sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q4csv" id="q4d" value="2">
+            <label for="q4d" class="d">Disagree</label>
+            <input type="radio" name="q4csv" id="q4n" value="3">
+            <label for="q4n" class="n">Neutral</label>
+            <input type="radio" name="q4csv" id="q4a" value="4">
+            <label for="q4a" class="a">Agree</label>
+            <input type="radio" name="q4csv" id="q4sa" value="5">
+            <label for="q4sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">5. When making decisions, I rely more on logic than emotions:</p>
+            <input type="radio" name="q5csv" id="q5sd" value="1">
+            <label for="q5sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q5csv" id="q5d" value="2">
+            <label for="q5d" class="d">Disagree</label>
+            <input type="radio" name="q5csv" id="q5n" value="3">
+            <label for="q5n" class="n">Neutral</label>
+            <input type="radio" name="q5csv" id="q5a" value="4">
+            <label for="q5a" class="a">Agree</label>
+            <input type="radio" name="q5csv" id="q5sa" value="5">
+            <label for="q5sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">6. I find it easy to detach emotions from decision-making:</p>
+            <input type="radio" name="q6csv" id="q6sd" value="1">
+            <label for="q6sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q6csv" id="q6d" value="2">
+            <label for="q6d" class="d">Disagree</label>
+            <input type="radio" name="q6csv" id="q6n" value="3">
+            <label for="q6n" class="n">Neutral</label>
+            <input type="radio" name="q6csv" id="q6a" value="4">
+            <label for="q6a" class="a">Agree</label>
+            <input type="radio" name="q6csv" id="q6sa" value="5">
+            <label for="q6sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">7. I prioritize people's feelings over facts when making choices:</p>
+            <input type="radio" name="q7csv" id="q7sd" value="1">
+            <label for="q7sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q7csv" id="q7d" value="2">
+            <label for="q7d" class="d">Disagree</label>
+            <input type="radio" name="q7csv" id="q7n" value="3">
+            <label for="q7n" class="n">Neutral</label>
+            <input type="radio" name="q7csv" id="q7a" value="4">
+            <label for="q7a" class="a">Agree</label>
+            <input type="radio" name="q7csv" id="q7sa" value="5">
+            <label for="q7sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">8. I believe emotions should not interfere with important decisions:</p>
+            <input type="radio" name="q8csv" id="q8sd" value="1">
+            <label for="q8sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q8csv" id="q8d" value="2">
+            <label for="q8d" class="d">Disagree</label>
+            <input type="radio" name="q8csv" id="q8n" value="3">
+            <label for="q8n" class="n">Neutral</label>
+            <input type="radio" name="q8csv" id="q8a" value="4">
+            <label for="q8a" class="a">Agree</label>
+            <input type="radio" name="q8csv" id="q8sa" value="5">
+            <label for="q8sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">9. I tend to avoid conflict to maintain harmony in relationships:</p>
+            <input type="radio" name="q9csv" id="q9sd" value="1">
+            <label for="q9sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q9csv" id="q9d" value="2">
+            <label for="q9d" class="d">Disagree</label>
+            <input type="radio" name="q9csv" id="q9n" value="3">
+            <label for="q9n" class="n">Neutral</label>
+            <input type="radio" name="q9csv" id="q9a" value="4">
+            <label for="q9a" class="a">Agree</label>
+            <input type="radio" name="q9csv" id="q9sa" value="5">
+            <label for="q9sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">10. I prefer making detailed plans before starting a project:</p>
+            <input type="radio" name="q10csv" id="q10sd" value="1">
+            <label for="q10sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q10csv" id="q10d" value="2">
+            <label for="q10d" class="d">Disagree</label>
+            <input type="radio" name="q10csv" id="q10n" value="3">
+            <label for="q10n" class="n">Neutral</label>
+            <input type="radio" name="q10csv" id="q10a" value="4">
+            <label for="q10a" class="a">Agree</label>
+            <input type="radio" name="q10csv" id="q10sa" value="5">
+            <label for="q10sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">11. I feel uncomfortable when things don’t go as planned:</p>
+            <input type="radio" name="q11csv" id="q11sd" value="1">
+            <label for="q11sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q11csv" id="q11d" value="2">
+            <label for="q11d" class="d">Disagree</label>
+            <input type="radio" name="q11csv" id="q11n" value="3">
+            <label for="q11n" class="n">Neutral</label>
+            <input type="radio" name="q11csv" id="q11a" value="4">
+            <label for="q11a" class="a">Agree</label>
+            <input type="radio" name="q11csv" id="q11sa" value="5">
+            <label for="q11sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">12. I enjoy spontaneity and dislike strict schedules:</p>
+            <input type="radio" name="q12csv" id="q12sd" value="1">
+            <label for="q12sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q12csv" id="q12d" value="2">
+            <label for="q12d" class="d">Disagree</label>
+            <input type="radio" name="q12csv" id="q12n" value="3">
+            <label for="q12n" class="n">Neutral</label>
+            <input type="radio" name="q12csv" id="q12a" value="4">
+            <label for="q12a" class="a">Agree</label>
+            <input type="radio" name="q12csv" id="q12sa" value="5">
+            <label for="q12sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">13. I prefer having a structured routine rather than going with the flow:</p>
+            <input type="radio" name="q13csv" id="q13sd" value="1">
+            <label for="q13sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q13csv" id="q13d" value="2">
+            <label for="q13d" class="d">Disagree</label>
+            <input type="radio" name="q13csv" id="q13n" value="3">
+            <label for="q13n" class="n">Neutral</label>
+            <input type="radio" name="q13csv" id="q13a" value="4">
+            <label for="q13a" class="a">Agree</label>
+            <input type="radio" name="q13csv" id="q13sa" value="5">
+            <label for="q13sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">14. I often leave decisions to the last minute rather than planning in advance:</p>
+            <input type="radio" name="q14csv" id="q14sd" value="1">
+            <label for="q14sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q14csv" id="q14d" value="2">
+            <label for="q14d" class="d">Disagree</label>
+            <input type="radio" name="q14csv" id="q14n" value="3">
+            <label for="q14n" class="n">Neutral</label>
+            <input type="radio" name="q14csv" id="q14a" value="4">
+            <label for="q14a" class="a">Agree</label>
+            <input type="radio" name="q14csv" id="q14sa" value="5">
+            <label for="q14sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">15. I like experimenting with new activities instead of sticking to familiar ones:</p>
+            <input type="radio" name="q15csv" id="q15sd" value="1">
+            <label for="q15sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q15csv" id="q15d" value="2">
+            <label for="q15d" class="d">Disagree</label>
+            <input type="radio" name="q15csv" id="q15n" value="3">
+            <label for="q15n" class="n">Neutral</label>
+            <input type="radio" name="q15csv" id="q15a" value="4">
+            <label for="q15a" class="a">Agree</label>
+            <input type="radio" name="q15csv" id="q15sa" value="5">
+            <label for="q15sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">16. I tend to think through all possible outcomes before taking action:</p>
+            <input type="radio" name="q16csv" id="q16sd" value="1">
+            <label for="q16sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q16csv" id="q16d" value="2">
+            <label for="q16d" class="d">Disagree</label>
+            <input type="radio" name="q16csv" id="q16n" value="3">
+            <label for="q16n" class="n">Neutral</label>
+            <input type="radio" name="q16csv" id="q16a" value="4">
+            <label for="q16a" class="a">Agree</label>
+            <input type="radio" name="q16csv" id="q16sa" value="5">
+            <label for="q16sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">17. I feel more comfortable in unpredictable situations rather than structured ones:</p>
+            <input type="radio" name="q17csv" id="q17sd" value="1">
+            <label for="q17sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q17csv" id="q17d" value="2">
+            <label for="q17d" class="d">Disagree</label>
+            <input type="radio" name="q17csv" id="q17n" value="3">
+            <label for="q17n" class="n">Neutral</label>
+            <input type="radio" name="q17csv" id="q17a" value="4">
+            <label for="q17a" class="a">Agree</label>
+            <input type="radio" name="q17csv" id="q17sa" value="5">
+            <label for="q17sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">18. I enjoy taking risks and trying new things:</p>
+            <input type="radio" name="q18csv" id="q18sd" value="1">
+            <label for="q18sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q18csv" id="q18d" value="2">
+            <label for="q18d" class="d">Disagree</label>
+            <input type="radio" name="q18csv" id="q18n" value="3">
+            <label for="q18n" class="n">Neutral</label>
+            <input type="radio" name="q18csv" id="q18a" value="4">
+            <label for="q18a" class="a">Agree</label>
+            <input type="radio" name="q18csv" id="q18sa" value="5">
+            <label for="q18sa" class="sa"> Strongly Agree</label>
+
+            <p class="q">19. I prefer having a daily to-do list and following a fixed schedule:</p>
+            <input type="radio" name="q19csv" id="q19sd" value="1">
+            <label for="q19sd" class="sd">Strongly Disagree</label>
+            <input type="radio" name="q19csv" id="q19d" value="2">
+            <label for="q19d" class="d">Disagree</label>
+            <input type="radio" name="q19csv" id="q19n" value="3">
+            <label for="q19n" class="n">Neutral</label>
+            <input type="radio" name="q19csv" id="q19a" value="4">
+            <label for="q19a" class="a">Agree</label>
+            <input type="radio" name="q19csv" id="q19sa" value="5">
+            <label for="q19sa" class="sa"> Strongly Agree</label>
+            <input type="submit" value="Submit Your Quiz" id="quiz_submit">
+        </form> 
+    </div>
+    <!-- <button type="submit" id="quiz_submit">Submit Your Quiz</button> -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const questions = 19; // Total number of questions
+            let allAnswered = true;
+    
+            for (let i = 1; i <= questions; i++) {
+                const options = document.getElementsByName(`q${i}csv`);
+                if (![...options].some(option => option.checked)) {
+                    allAnswered = false;
+                    break;
+                }
+            }
+    
+            if (!allAnswered) {
+                event.preventDefault(); // Stop form submission
+                alert("Please answer all questions before submitting.");
+            }
+        });
+    </script>
+    
+</body>
+</html>
